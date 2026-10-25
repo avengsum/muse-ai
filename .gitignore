@@ -1,41 +1,88 @@
-# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
-
-# dependencies
+# Dependencies and package-manager caches
 node_modules/
+.npm/
 
-# Expo
+# Expo, Metro, and generated web output
 .expo/
+.expo-shared/
 dist/
 web-build/
 expo-env.d.ts
+.metro-health-check*
+/.export-check*/
+/.dark-mode-android-check/
 
-# Native
+# Generated native projects and build artifacts
+/ios/
+/android/
+.gradle/
 .kotlin/
+.cxx/
+*.apk
+*.aab
+*.ipa
+*.xcarchive
 *.orig.*
+
+# Signing credentials and certificates
 *.jks
+*.keystore
 *.p8
 *.p12
 *.key
+*.pem
 *.mobileprovision
 
-# Metro
-.metro-health-check*
+# Local environment files. Keep sanitized templates in Git.
+.env
+.env.*
+!.env.example
+!**/.env.example
 
-# debug
+# Python virtual environments, caches, and test output
+.venv/
+venv/
+.uv-cache*/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+
+# Local databases and runtime state
+*.db
+*.db-journal
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+
+# Logs and temporary files
+*.log
 npm-debug.*
 yarn-debug.*
 yarn-error.*
+*.tmp
+*.temp
 
-# macOS
-.DS_Store
-*.pem
+# Local archives and packaged copies (can accidentally contain .env files)
+*.zip
+*.7z
+*.tar
+*.tar.gz
+*.tgz
 
-# local env files
-.env*.local
-
-# typescript
+# TypeScript build state
 *.tsbuildinfo
 
-# generated native folders
-/ios
-/android
+# Operating-system metadata
+.DS_Store
+Thumbs.db
+Desktop.ini
